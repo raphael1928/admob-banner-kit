@@ -1,4 +1,4 @@
-package br.com.raphael.admobbannerkit.core.model
+package br.com.raphael.admobbannerkit.api
 
 sealed class AdEvent {
     object Loading : AdEvent()

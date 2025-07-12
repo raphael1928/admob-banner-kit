@@ -1,12 +1,12 @@
-package br.com.raphael.admobbannerkit.core.ui
+package br.com.raphael.admobbannerkit.ui.legacy
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.google.android.gms.ads.*
 import br.com.raphael.admobbannerkit.core.AdMobManager
-import br.com.raphael.admobbannerkit.core.model.AdEvent
-import br.com.raphael.admobbannerkit.core.model.AdEventListener
+import br.com.raphael.admobbannerkit.api.AdEvent
+import br.com.raphael.admobbannerkit.api.AdEventListener
 
 class AdBannerView @JvmOverloads constructor(
     context: Context,

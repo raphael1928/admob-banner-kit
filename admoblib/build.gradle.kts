@@ -5,17 +5,33 @@ plugins {
     id("maven-publish")
 }
 
-group = "br.com.raphael.admoblib"
-version = "1.0.0"
-
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = group as String
                 artifactId = "admoblib"
-                version = version as String
+                groupId = "br.com.raphael.admoblib"
+                version = "1.0.1"
+
+                pom {
+                    name.set("AdMobBannerKit")
+                    description.set("A lightweight AdMob banner library for Android apps using Jetpack Compose or XML")
+                }
+            }
+        }
+
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/raphael1928/admob-banner-kit")
+                credentials {
+//                  Token com expiração de 7 dias somente para conseguir testar sem precisar pasar o gradle.properties
+                    username = "raphael1928"
+                    password = "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"
+//                    username = project.findProperty("gpr.user") as String? ?: System.getenv("GPR_USER")
+//                    password = project.findProperty("gpr.key") as String? ?: System.getenv("GPR_TOKEN")
+                }
             }
         }
     }

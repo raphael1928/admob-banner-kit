@@ -1,4 +1,4 @@
-package br.com.raphael.admobbannerkit.core.ui
+package br.com.raphael.admobbannerkit.ui
 
 import android.content.Context
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import android.widget.FrameLayout
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.viewinterop.AndroidView
 import br.com.raphael.admobbannerkit.core.AdMobManager
-import br.com.raphael.admobbannerkit.core.model.AdEvent
-import br.com.raphael.admobbannerkit.core.model.AdEventListener
+import br.com.raphael.admobbannerkit.api.AdEvent
+import br.com.raphael.admobbannerkit.api.AdEventListener
 import com.google.android.gms.ads.*
 
 @Composable
